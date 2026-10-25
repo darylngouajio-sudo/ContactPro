@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="contactpro.MainPage"
+    Title="ContactPro"
+    BackgroundColor="#F5F7FB">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- En-tête -->
+        <VerticalStackLayout
+            Grid.Row="0"
+            Padding="24,25,24,18"
+            Spacing="8"
+            BackgroundColor="#FFFFFF">
+
+            <Label
+                Text="ContactPro"
+                FontSize="29"
+                FontAttributes="Bold"
+                TextColor="#173B67" />
+
+            <Label
+                Text="Tous vos contacts au même endroit"
+                FontSize="14"
+                TextColor="#68778D" />
+
+            <SearchBar
+                x:Name="RechercheBar"
+                Placeholder="Rechercher un contact..."
+                BackgroundColor="#F1F4F9"
+                TextColor="#202B3C"
+                Margin="0,10,0,0" />
+
+            <Button
+                Text="+ Ajouter un contact"
+                BackgroundColor="#246BFD"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                Clicked="OnAjouterContactClicked" />
+
+        </VerticalStackLayout>
+
+        <!-- Contenu principal -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout
+                Padding="24,20"
+                Spacing="18">
+
+                <Label
+                    Text="Mon espace"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#173B67" />
+
+                <Grid
+                    ColumnDefinitions="*,*"
+                    RowDefinitions="Auto,Auto"
+                    ColumnSpacing="12"
+                    RowSpacing="12">
+
+                    <Border
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        Stroke="#E1E7F0"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 14">
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="👥" FontSize="25" />
+                            <Label
+                                Text="Contacts"
+                                FontSize="14"
+                                TextColor="#68778D" />
+                            <Label
+                                x:Name="NombreContactsLabel"
+                                Text="0"
+                                FontSize="27"
+                                FontAttributes="Bold"
+                                TextColor="#173B67" />
+                        </VerticalStackLayout>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnContactsCardTapped" />
+                        </Border.GestureRecognizers>
+                    </Border>
+
+                    <Border
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        Stroke="#E1E7F0"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 14">
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="📁" FontSize="25" />
+                            <Label
+                                Text="Groupes"
+                                FontSize="14"
+                                TextColor="#68778D" />
+                            <Label
+                                Text="Organisation"
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                TextColor="#173B67" />
+                        </VerticalStackLayout>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnGroupesCardTapped" />
+                        </Border.GestureRecognizers>
+                    </Border>
+
+                    <Border
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BackgroundColor="White"
+                        Stroke="#E1E7F0"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 14">
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="📝" FontSize="25" />
+                            <Label
+                                Text="Notes"
+                                FontSize="14"
+                                TextColor="#68778D" />
+                            <Label
+                                Text="Mes mémos"
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                TextColor="#173B67" />
+                        </VerticalStackLayout>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnNotesCardTapped" />
+                        </Border.GestureRecognizers>
+                    </Border>
+
+                    <Border
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        Stroke="#E1E7F0"
+                        Padding="16"
+                        StrokeShape="RoundRectangle 14">
+
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="⏰" FontSize="25" />
+                            <Label
+                                Text="Relances"
+                                FontSize="14"
+                                TextColor="#68778D" />
+                            <Label
+                                Text="À suivre"
+                                FontSize="15"
+                                FontAttributes="Bold"
+                                TextColor="#173B67" />
+                        </VerticalStackLayout>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRappelsCardTapped" />
+                        </Border.GestureRecognizers>
+                    </Border>
+
+                </Grid>
+
+                <Label
+                    Text="Mes contacts"
+                    FontSize="21"
+                    FontAttributes="Bold"
+                    TextColor="#173B67"
+                    Margin="0,8,0,0" />
+
+                <Label
+                    x:Name="MessageVideLabel"
+                    Text="Aucun contact pour le moment. Appuie sur « Ajouter un contact » pour commencer."
+                    FontSize="14"
+                    TextColor="#68778D"
+                    HorizontalTextAlignment="Center"
+                    Margin="0,15,0,15" />
+
+                <VerticalStackLayout
+                    x:Name="ListeContacts"
+                    Spacing="12" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

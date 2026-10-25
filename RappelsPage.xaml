@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="contactpro.RappelsPage"
+    Title="Rappels"
+    BackgroundColor="#F4F7FC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="18">
+            <Label Text="CONTACTPRO"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="#246BFD" />
+
+            <Label Text="Mes rappels"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#173B67" />
+
+            <Label Text="Planifie tes prochaines relances."
+                   FontSize="14"
+                   TextColor="#68778D" />
+
+            <Entry x:Name="ContactRappelEntry"
+                   Placeholder="Nom du contact"
+                   BackgroundColor="White" />
+
+            <Entry x:Name="ObjetRappelEntry"
+                   Placeholder="Objet de la relance"
+                   BackgroundColor="White" />
+
+            <DatePicker x:Name="DateRappelPicker" />
+
+            <Button Text="Ajouter un rappel"
+                    BackgroundColor="#246BFD"
+                    TextColor="White"
+                    Clicked="OnAjouterRappelClicked" />
+
+            <Label Text="Relances prévues"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#173B67" />
+
+            <VerticalStackLayout x:Name="ListeRappels"
+                                 Spacing="10" />
+
+            <Button Text="Retour à l'accueil"
+                    BackgroundColor="#173B67"
+                    TextColor="White"
+                    Clicked="OnRetourAccueilClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

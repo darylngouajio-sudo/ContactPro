@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="contactpro.ContactsPage"
+    Title="Mes contacts"
+    BackgroundColor="#F4F7FC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+
+            <Label
+                Text="CONTACTPRO"
+                FontSize="13"
+                FontAttributes="Bold"
+                TextColor="#246BFD" />
+
+            <Label
+                Text="Mes contacts"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#173B67" />
+
+            <Label
+                Text="Organise tes contacts professionnels au même endroit."
+                FontSize="14"
+                TextColor="#68778D" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E1E7F0"
+                Padding="18">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Mon carnet professionnel"
+                        FontSize="19"
+                        FontAttributes="Bold"
+                        TextColor="#173B67" />
+
+                    <Label
+                        Text="Retrouve ici tes contacts professionnels."
+                        FontSize="14"
+                        TextColor="#68778D" />
+
+                    <Button
+                        Text="Retour à l'accueil"
+                        BackgroundColor="#246BFD"
+                        TextColor="White"
+                        CornerRadius="12"
+                        Clicked="OnRetourAccueilClicked" />
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

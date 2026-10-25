@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="contactpro.GroupesPage"
+    Title="Groupes"
+    BackgroundColor="#F4F7FC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+
+            <Label
+                Text="CONTACTPRO"
+                FontSize="13"
+                FontAttributes="Bold"
+                TextColor="#246BFD" />
+
+            <Label
+                Text="Mes groupes"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#173B67" />
+
+            <Label
+                Text="Classe tes contacts par catégorie."
+                FontSize="14"
+                TextColor="#68778D" />
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E1E7F0"
+                Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Famille"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#173B67" />
+
+                    <Label
+                        Text="Contacts personnels"
+                        FontSize="14"
+                        TextColor="#68778D" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E1E7F0"
+                Padding="16">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="Professionnel"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#173B67" />
+
+                    <Label
+                        Text="Collègues, clients et partenaires"
+                        FontSize="14"
+                        TextColor="#68778D" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Button
+                Text="Retour à l'accueil"
+                BackgroundColor="#246BFD"
+                TextColor="White"
+                CornerRadius="12"
+                Clicked="OnRetourAccueilClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

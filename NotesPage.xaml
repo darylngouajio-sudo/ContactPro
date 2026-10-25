@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="contactpro.NotesPage"
+    Title="Notes"
+    BackgroundColor="#F4F7FC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+            <Label Text="CONTACTPRO"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="#246BFD" />
+
+            <Label Text="Notes et mémos"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#173B67" />
+
+            <Label Text="Garde une trace des informations importantes."
+                   FontSize="14"
+                   TextColor="#68778D" />
+
+            <Entry x:Name="TitreNoteEntry"
+                   Placeholder="Titre de la note"
+                   BackgroundColor="White" />
+
+            <Editor x:Name="ContenuNoteEditor"
+                    Placeholder="Écris ta note ici..."
+                    HeightRequest="140"
+                    BackgroundColor="White" />
+
+            <Button Text="Enregistrer la note"
+                    BackgroundColor="#246BFD"
+                    TextColor="White"
+                    Clicked="OnEnregistrerNoteClicked" />
+
+            <Label Text="Mes notes"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#173B67" />
+
+            <VerticalStackLayout x:Name="ListeNotes"
+                                 Spacing="10" />
+
+            <Button Text="Retour à l'accueil"
+                    BackgroundColor="#173B67"
+                    TextColor="White"
+                    Clicked="OnRetourAccueilClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
